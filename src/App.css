@@ -1,0 +1,50 @@
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: Arial, sans-serif;
+}
+
+.task-page {
+  display: flex;
+  height: 100vh;
+  transition: all 0.3s ease-in-out;
+}
+
+.sidebar {
+  width: 250px;
+  background: #f4f4f4;
+  position: fixed;
+  height: 100%;
+  left: -250px;
+  transition: all 0.3s ease-in-out;
+}
+
+.sidebar.open {
+  left: 0;
+}
+
+.task-manager {
+  flex: 1;
+  margin-left: 0;
+  transition: all 0.3s ease-in-out;
+}
+
+.task-manager.shifted {
+  margin-left: 250px;
+}
+
+.dark-mode {
+  background-color: #181818;
+  color: #ffffff;
+}
+
+.dark-mode .sidebar {
+  background: #242424;
+}
+
+.dark-mode .task-input input {
+  background: #333;
+  color: #fff;
+  border: 1px solid #444;
+}

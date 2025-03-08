@@ -1,0 +1,137 @@
+.task-page {
+  display: flex;
+  height: 100vh;
+  transition: all 0.3s ease-in-out;
+  overflow-x: hidden;
+}
+
+.sidebar {
+  width: 250px;
+  background: #f4f4f4;
+  position: fixed;
+  height: 100%;
+  left: -250px;
+  transition: all 0.3s ease-in-out;
+}
+
+.sidebar.open {
+  left: 0;
+}
+
+.task-manager {
+  flex: 1;
+  margin-left: 0;
+  transition: all 0.3s ease-in-out;
+  padding: 20px;
+  width: 100%;
+}
+
+.task-manager.shifted {
+  margin-left: 250px;
+}
+
+.task-input-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.task-input-box {
+  display: flex;
+  align-items: center;
+  background: #c2dcc6;
+  padding: 10px;
+  border-radius: 10px;
+  width: 100%;
+  height: 100px;
+  /* max-width: 600px; */
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.task-input-box input {
+  flex: 1;
+  padding: 8px;
+  border: none;
+  background: transparent;
+  font-size: 16px;
+  outline: none;
+}
+
+.task-icons {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 10px;
+  color: gray;
+}
+
+.add-task-btn {
+  background: #55b158;
+  color: white;
+  border: none;
+  padding: 8px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-left: 10px;
+}
+
+.task-list {
+  margin-top: 20px;
+}
+
+.task {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: white;
+  padding: 10px;
+  border-radius: 8px;
+  margin-bottom: 10px;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.task.completed span {
+  text-decoration: line-through;
+  color: gray;
+}
+
+.star {
+  color: gray;
+  cursor: pointer;
+}
+
+.star.active {
+  color: gold;
+}
+
+.delete {
+  color: red;
+  cursor: pointer;
+}
+
+.dark-mode .task-input-box {
+  background: rgba(111, 152, 113, 0.16);
+
+}
+
+.dark-mode .task-input-box input {
+  color: white;
+}
+
+@media (max-width: 768px) {
+  .sidebar {
+    width: 200px;
+  }
+
+  .sidebar.open {
+    left: 0;
+  }
+
+  .task-manager {
+    width: 100%;
+  }
+
+  .task-manager.shifted {
+    margin-left: 0;
+  }
+}
